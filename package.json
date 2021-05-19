@@ -13,7 +13,7 @@
   },
   "author": "ttntm",
   "license": "MIT",
-  "homepage": "https://shiryakhat.github.io/coiniran-academy-landing-page/",
+  "homepage": "https://coiniran.academy",
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
