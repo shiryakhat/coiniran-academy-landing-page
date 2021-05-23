@@ -1,7 +1,12 @@
 ---
-title: AWE.SOME Feature Five
+title: جلسه نهم و دهم
 weight: 5
 icon: icon5.svg
 ---
 
-Maecenas pulvinar ultricies dolor, vitae sagittis nunc aliquam non. Cras vitae eros mi. Pellentesque ac orci mi. Ut dignissim tincidunt ex id tincidunt.
+تست و دیباگ و امنیت قراردادهای هوشمند
+
+
+باحث پیشرفته شامل پترنهای طراحی قرارداد هوشمند،  
+
+The Ethereum Name Service ، IPFS، Upgradable Contracts

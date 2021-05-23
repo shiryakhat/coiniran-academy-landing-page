@@ -1,7 +1,7 @@
 ---
-title: AWE.SOME Feature 8
+title: جلسات رفع اشکال
 weight: 8
-icon: icon8.svg
+icon: icon7.svg
 ---
 
-Maecenas pulvinar ultricies dolor, vitae sagittis nunc aliquam non. Cras vitae eros mi. Pellentesque ac orci mi. Ut dignissim tincidunt ex id tincidunt.
+علاوه بر فروم توسعه قرارداد‌هوشمند٫ جلسات پرسش و پاسخ و رفع اشکال برای دانشحویان

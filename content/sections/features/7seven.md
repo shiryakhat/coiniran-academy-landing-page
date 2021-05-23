@@ -1,7 +1,8 @@
 ---
-title: AWE.SOME Feature 7
+title: جلسات فوق‌برنامه
 weight: 7
-icon: icon7.svg
+icon: icon8.svg
 ---
 
-Maecenas pulvinar ultricies dolor, vitae sagittis nunc aliquam non. Cras vitae eros mi. Pellentesque ac orci mi. Ut dignissim tincidunt ex id tincidunt.
+دعوت از برنامه‌نویسان پروژه‌های مطرح بین‌المللی بلاکچین و دیفای
+

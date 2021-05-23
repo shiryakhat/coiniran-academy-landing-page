@@ -1,7 +1,9 @@
 ---
-title: AWE.SOME Feature 3
+title: جلسه پنجم و ششم
 weight: 3
 icon: icon3.svg
 ---
 
-Maecenas pulvinar ultricies dolor, vitae sagittis nunc aliquam non. Cras vitae eros mi. Pellentesque ac orci mi. Ut dignissim tincidunt ex id tincidunt.
+معرفی ابزارها و محیط های توسعه
+
+مقدمات سالیدیتی
