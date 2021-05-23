@@ -19,3 +19,15 @@
 {{- if ne .Site.Params.googleAnalytics "" -}}
   {{ template "_internal/google_analytics_async.html" . }}
 {{- end -}}
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WVKW560060"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-WVKW560060');
+</script>
+
+<!-- <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazir-font@v28.0.0/dist/font-face.css" rel="stylesheet" type="text/css" /> -->

@@ -7,7 +7,7 @@ disableKinds = ["RSS","taxonomy","taxonomyTerm"] # disable hugo's content that w
 
 title = "آکادمی کوین‌ایران - Coiniran Academy" # page title -> see ./layouts/partials/head.html
 
-googleAnalytics = "G-WVKW560060" # if needed...
+# googleAnalytics = "G-WVKW560060" # if needed...
 
 [author]
     name = "Shayan Eskandari"
