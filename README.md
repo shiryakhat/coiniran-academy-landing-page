@@ -6,6 +6,8 @@
 npm install
 ```
 
+Make sure you have [Hugo installed](https://gohugo.io/getting-started/installing/#homebrew-macos) as well.
+
 ### Usage
 ```
 npm run start
