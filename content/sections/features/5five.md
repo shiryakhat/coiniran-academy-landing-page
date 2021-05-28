@@ -9,4 +9,4 @@ icon: icon5.svg
 
 باحث پیشرفته شامل پترنهای طراحی قرارداد هوشمند،  
 
-The Ethereum Name Service ، IPFS، Upgradable Contracts
+ENS، IPFS، Upgradable Contracts
