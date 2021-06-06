@@ -19,7 +19,7 @@ title = "آکادمی کوین‌ ایران - Coiniran Academy" # page title ->
 
 # these items will be rendered 1. into a tooltip in the navbar and 2. into the footer - consider that there's limited space when adding more items -> see ./layouts/partials
 [[params.social]]
-    title = "تویتر"
+    title = "توییتر"
     url = "https://twitter.com/coiniran" # add your twitter handle
 [[params.social]]
     title = "انجمن"
