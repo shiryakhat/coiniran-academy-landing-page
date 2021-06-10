@@ -24,3 +24,6 @@ title = "آکادمی کوین‌ ایران - Coiniran Academy" # page title ->
 [[params.social]]
     title = "انجمن"
     url = "https://smartcontract.coiniran.com" # add your linkedin profile URL
+[[params.social]]
+    title = "خرید بلیط"
+    url = "https://evnd.co/6Y8DH" # add your linkedin profile URL
