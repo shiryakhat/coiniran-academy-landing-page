@@ -7,7 +7,7 @@ disableKinds = ["RSS","taxonomy","taxonomyTerm"] # disable hugo's content that w
 
 title = "آکادمی کوین‌ ایران - Coiniran Academy" # page title -> see ./layouts/partials/head.html
 
-# googleAnalytics = "G-WVKW560060" # if needed...
+googleAnalytics = "G-6RSMTN9RB2" # if needed...
 
 [author]
     name = "Coiniran Academy"
@@ -24,7 +24,3 @@ title = "آکادمی کوین‌ ایران - Coiniran Academy" # page title ->
 [[params.social]]
     title = "انجمن"
     url = "https://smartcontract.coiniran.com" # add your linkedin profile URL
-
-#[[params.social]]
-#    title = "خرید بلیط"
-#    url = "https://evnd.co/dYTzd" # add your linkedin profile URL
