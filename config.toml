@@ -10,8 +10,8 @@ title = "آکادمی کوین‌ ایران - Coiniran Academy" # page title ->
 # googleAnalytics = "G-WVKW560060" # if needed...
 
 [author]
-    name = "Shayan Eskandari"
-    email = "me@shayan.es"
+    name = "Coiniran Academy"
+    email = "info@shiryakhat.net"
 
 [params]
     description = "آکادمی کوین‌ ایران٫ دوره آموزشی بلاکچین٫ قرارداد هوشمند با سالیدیتی  - Coiniran Academy - Smartcontract Development course" # page description -> see ./layouts/partials/head.html
@@ -20,10 +20,11 @@ title = "آکادمی کوین‌ ایران - Coiniran Academy" # page title ->
 # these items will be rendered 1. into a tooltip in the navbar and 2. into the footer - consider that there's limited space when adding more items -> see ./layouts/partials
 [[params.social]]
     title = "توییتر"
-    url = "https://twitter.com/coiniran" # add your twitter handle
+    url = "https://twitter.com/coiniranacademy" # add your twitter handle
 [[params.social]]
     title = "انجمن"
     url = "https://smartcontract.coiniran.com" # add your linkedin profile URL
-[[params.social]]
-    title = "خرید بلیط"
-    url = "https://evnd.co/dYTzd" # add your linkedin profile URL
+
+#[[params.social]]
+#    title = "خرید بلیط"
+#    url = "https://evnd.co/dYTzd" # add your linkedin profile URL
