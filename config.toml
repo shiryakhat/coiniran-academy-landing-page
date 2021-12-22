@@ -28,3 +28,7 @@ title = "آکادمی کوین‌ ایران - Coiniran Academy" # page title ->
 [[params.social]]
     title = "دوره آموزشی"
     url = "https://smartcontract.coiniran.com/t/topic/1501"
+
+[[params.social]]
+    title = "یوتیوب"
+    url = "https://www.youtube.com/playlist?list=PLDwI1rIhknpNyUWdFt_XD6rpTEjTkUcYo"
