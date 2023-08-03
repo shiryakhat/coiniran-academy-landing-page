@@ -18,6 +18,15 @@ title = "آکادمی کوین‌ ایران - Coiniran Academy" # page title ->
     images = [] #add images here as "img/name.ext" (points to s./static/img/) to populate the default og and twitter <meta> attributes -> see ./layouts/partials/head.html
 
 # these items will be rendered 1. into a tooltip in the navbar and 2. into the footer - consider that there's limited space when adding more items -> see ./layouts/partials
+
+[[params.social]]
+    title = "دوره ۱۴۰۲"
+    url = "https://smartcontract.coiniran.com/t/topic/5637"
+
+[[params.social]]
+    title = "یوتیوب"
+    url = "https://www.youtube.com/playlist?list=PLDwI1rIhknpN-4ZnbcQfqDgM5dVY73ruS"
+
 [[params.social]]
     title = "توییتر"
     url = "https://twitter.com/coiniranacademy" # add your twitter handle
@@ -26,9 +35,6 @@ title = "آکادمی کوین‌ ایران - Coiniran Academy" # page title ->
     url = "https://smartcontract.coiniran.com" # add your linkedin profile URL
 
 [[params.social]]
-    title = "دوره آموزشی"
+    title = "دوره ۱۴۰۰"
     url = "https://smartcontract.coiniran.com/t/topic/1501"
 
-[[params.social]]
-    title = "یوتیوب"
-    url = "https://www.youtube.com/playlist?list=PLDwI1rIhknpNyUWdFt_XD6rpTEjTkUcYo"
