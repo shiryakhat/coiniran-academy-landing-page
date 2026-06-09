@@ -12,10 +12,10 @@
     <div class="text-center px-8 py-4">
         <ul class="list-none">
             <li>
-                <a class="text-gray-800 hover:text-pink-600 no-underline" href="#about">About</a>
+                <a class="text-gray-800 hover:text-pink-600 no-underline" href="#about">{{ i18n "footer_about" }}</a>
             </li>
             <li>
-                <a class="text-gray-800 hover:text-pink-600 no-underline" href="#features">Features</a>
+                <a class="text-gray-800 hover:text-pink-600 no-underline" href="#features">{{ i18n "footer_features" }}</a>
             </li>
         </ul>
     </div>
@@ -38,7 +38,7 @@
     </span>
 </div>
 <div class="">
-    <a id="btt" class="hidden fixed bottom-0 right-0 mb-4 mr-4 text-gray-200 border border-pink-600 hover:bg-gray-200 hover:text-pink-600 hover:border-browngray no-underline px-6 py-1 bg-pink-600 shadow-md" href="{{ if .IsHome }}#top{{ else }}{{ .Permalink }}#top{{ end }}" title="Back to Top">بالا</a>
+    <a id="btt" class="hidden fixed bottom-0 right-0 mb-4 mr-4 text-gray-200 border border-pink-600 hover:bg-gray-200 hover:text-pink-600 hover:border-browngray no-underline px-6 py-1 bg-pink-600 shadow-md" href="{{ if .IsHome }}#top{{ else }}{{ .Permalink }}#top{{ end }}" title="{{ i18n "back_to_top" }}">{{ i18n "back_to_top" }}</a>
 </div>
 
 <!-- "Follow" Tooltip template -->

@@ -1,4 +1,12 @@
-package-lock.json
+# Hugo build output (now built & deployed by GitHub Actions — no longer committed)
+docs/
+public/
+resources/_gen/
+.hugo_build.lock
+
+# Stray local copies / editor cruft
+_site/
+.DS_Store
 
 # Logs
 logs

@@ -1,0 +1,35 @@
+# Track-record numbers and lists. Stat values are language-neutral; their
+# labels come from i18n (stat_* keys). Edit numbers here.
+stats:
+  - value: "2"
+    label: "stat_cohorts"
+  - value: "33"
+    label: "stat_graduates"
+  - value: "100%"
+    label: "stat_completion"
+  - value: "28%"
+    label: "stat_women"
+  - value: "13"
+    label: "stat_youngest"
+  - value: "51k+"
+    label: "stat_views"
+
+# Guest speakers (2023 cohort) — proper nouns, shown the same in both languages.
+speakers:
+  - name: "Sina Mahmoodi"
+    org: "Ethereum Foundation"
+  - name: "Mehdi Salehi"
+    org: "Arbitrum"
+  - name: "Mohammad Jahanara"
+    org: "Quantstamp"
+
+# Notable student projects (2023 cohort).
+projects:
+  - name: "DeLP"
+    author: "Mahdieh Amiri"
+  - name: "Tender"
+    author: "Hadi Saghafi"
+  - name: "Donation dApp"
+    author: "Bahador Ghadamkheir"
+  - name: "Copyright Management"
+    author: "Hadi Hassan Pourneiyam"

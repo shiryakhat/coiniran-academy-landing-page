@@ -1,0 +1,52 @@
+{{ $headless := .Site.GetPage "/sections" }}
+{{ $videos := $headless.Resources.GetMatch (printf "*%s*" "videos") }}
+{{ $data := hugo.Data.cohorts }}
+{{ $lang := .Site.Language.Lang }}
+
+<div id="videos" class="w-full flex flex-col justify-center items-center bg-white py-20">
+    <div class="self-center text-center w-full sm:w-2/3 xl:w-1/2 px-4 mb-8">
+        <h2 class="font-bold tracking-wider text-gray-800 text-4xl mb-4">{{ $videos.Title }}</h2>
+        <div class="font-light text-gray-700 text-xl">
+            {{ $videos.Content }}
+        </div>
+    </div>
+
+    <div class="self-center w-full xl:w-4/5 flex flex-col lg:flex-row lg:items-start px-4">
+
+        <!-- Latest cohort: embedded player -->
+        {{ range where $data.cohorts "latest" true }}
+            <div class="w-full lg:w-2/3 lg:pr-8 mb-8 lg:mb-0">
+                <div class="inline-block bg-pink-600 text-gray-100 text-sm font-bold rounded-full px-4 py-1 mb-3">
+                    {{ i18n "videos_latest_badge" }} · {{ if eq $lang "fa" }}{{ .yearFa }}{{ else }}{{ .yearEn }}{{ end }}
+                </div>
+                <div class="video-embed shadow-lg rounded-lg overflow-hidden">
+                    <iframe src="https://www.youtube.com/embed/videoseries?list={{ .playlist }}"
+                        title="Coiniran Academy {{ .yearEn }}" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen loading="lazy"></iframe>
+                </div>
+                <div class="text-gray-600 font-light mt-3">
+                    {{ i18n "videos_count" (dict "Count" .videos) }} · {{ i18n "videos_views" (dict "Views" .views) }}
+                </div>
+            </div>
+        {{ end }}
+
+        <!-- Older cohort(s): cards -->
+        <div class="w-full lg:w-1/3 flex flex-col">
+            {{ range where $data.cohorts "latest" false }}
+                <div class="bg-gray-100 rounded-lg shadow-md p-6 mb-4">
+                    <div class="inline-block bg-gray-800 text-gray-100 text-sm font-bold rounded-full px-4 py-1 mb-3">
+                        {{ i18n "videos_archive_badge" }} · {{ if eq $lang "fa" }}{{ .yearFa }}{{ else }}{{ .yearEn }}{{ end }}
+                    </div>
+                    <div class="text-gray-700 font-light mb-4">
+                        {{ i18n "videos_count" (dict "Count" .videos) }} · {{ i18n "videos_views" (dict "Views" .views) }}
+                    </div>
+                    <a href="https://www.youtube.com/playlist?list={{ .playlist }}" target="_blank" rel="noopener"
+                        class="inline-block px-6 py-2 text-gray-100 bg-pink-600 rounded-full shadow-md hover:bg-gray-800 no-underline">
+                        {{ i18n "btn_watch_youtube" }}
+                    </a>
+                </div>
+            {{ end }}
+        </div>
+    </div>
+</div>

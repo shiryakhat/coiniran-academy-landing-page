@@ -1,0 +1,19 @@
+# Course video cohorts. Labels are translated via i18n; these are the
+# language-neutral facts. `latest: true` marks the cohort embedded inline.
+cohorts:
+  - id: "2023"
+    yearFa: "۱۴۰۲"
+    yearEn: "2023"
+    latest: true
+    playlist: "PLDwI1rIhknpN-4ZnbcQfqDgM5dVY73ruS"
+    videos: 11
+    views: "8.2k"
+    forum: "https://smartcontract.coiniran.com/t/topic/5637"
+  - id: "2021"
+    yearFa: "۱۴۰۰"
+    yearEn: "2021"
+    latest: false
+    playlist: "PLDwI1rIhknpNyUWdFt_XD6rpTEjTkUcYo"
+    videos: 14
+    views: "43k"
+    forum: "https://smartcontract.coiniran.com/t/topic/1501"

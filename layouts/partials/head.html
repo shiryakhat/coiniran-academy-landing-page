@@ -14,13 +14,9 @@
         {{ template "_internal/twitter_cards.html" . }}
         {{ template "_internal/opengraph.html" . }}
 <!-- ./END SOCIAL META DATA -->
-<base href="{{ .Site.BaseURL }}">
 <meta name="theme-color" content="#ffffff">
-<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Author.name }}{{ end }}</title>
+<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} | {{ .Site.Params.author.name }}{{ end }}</title>
 <link rel="stylesheet" href="/css/page.css">
-{{- if ne .Site.Params.googleAnalytics "" -}}
-  {{ template "_internal/google_analytics_async.html" . }}
-{{- end -}}
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-WVKW560060"></script>

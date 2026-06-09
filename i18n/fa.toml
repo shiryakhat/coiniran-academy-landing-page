@@ -1,0 +1,93 @@
+# Navbar
+[nav_about]
+other = "درباره"
+[nav_course]
+other = "معرفی دوره"
+[nav_videos]
+other = "ویدیوها"
+[nav_follow]
+other = "با ما باشید"
+[nav_register]
+other = "ثبت نام"
+
+# Hero
+[hero_brand]
+other = "کوین‌‌ایران آکادمی"
+[hero_title_pre]
+other = "دوره توسعه بلاکچین"
+[hero_title_main]
+other = "قرارداد‌ هوشمند"
+[hero_tagline]
+other = "آینده روشن خود را بسازید"
+[hero_rot_1]
+other = "سالیدیتی"
+[hero_rot_2]
+other = "اتریوم"
+[hero_rot_3]
+other = "تابستان ۱۴۰۲"
+[hero_rot_4]
+other = "مدرک ان-اف-تی"
+[hero_rot_5]
+other = "اقتصاد غیرمتمرکز"
+[hero_rot_6]
+other = "شرکت در هکتان بین‌المللی"
+[hero_rot_7]
+other = "DevConnect Istanbul"
+[hero_cta]
+other = "دوره تابستان ۱۴۰۲"
+
+# Buttons / generic
+[btn_course_intro]
+other = "معرفی دوره"
+[btn_register]
+other = "ثبت نام"
+[btn_watch_youtube]
+other = "تماشا در یوتیوب"
+[back_to_top]
+other = "بالا"
+
+# Footer
+[footer_about]
+other = "درباره"
+[footer_features]
+other = "معرفی دوره"
+
+# Register form
+[register_email_placeholder]
+other = "solidity@ethereum.org"
+
+# Videos / cohorts section
+[videos_latest_badge]
+other = "جدیدترین دوره"
+[videos_archive_badge]
+other = "آرشیو دوره"
+[videos_count]
+other = "{{ .Count }} ویدیو"
+[videos_views]
+other = "{{ .Views }} بازدید"
+
+# Stats / track record
+[stat_cohorts]
+other = "دوره برگزارشده"
+[stat_graduates]
+other = "دانش‌آموخته"
+[stat_completion]
+other = "نرخ فارغ‌التحصیلی"
+[stat_women]
+other = "دانشجویان خانم (۳۸٪ فارغ‌التحصیلان)"
+[stat_youngest]
+other = "سن کم‌ترین دانشجو"
+[stat_views]
+other = "بازدید ویدیوها"
+[stat_certificate]
+other = "مدرک ان‌اف‌تی (POAP)"
+[stat_years]
+other = "سال‌های ۱۴۰۰ و ۱۴۰۲"
+
+[highlight_devconnect]
+other = "حمایت مالی از دانشجویان برتر و مدرسان برای حضور در DevConnect استانبول ۲۰۲۳ و منتورینگ در ETHGlobal Istanbul"
+
+[speakers_title]
+other = "سخنرانان مهمان"
+[projects_title]
+other = "پروژه‌های دانشجویان (۱۴۰۲)"

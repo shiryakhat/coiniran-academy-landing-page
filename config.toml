@@ -1,40 +1,86 @@
 # SETUP
-baseurl = "/"
-DefaultContentLanguage = "en"
-publishdir = "docs"
+baseurl = "https://coiniran.academy/"
 canonifyUrls = "true"
-disableKinds = ["RSS","taxonomy","taxonomyTerm"] # disable hugo's content that we don't need...
+disableKinds = ["RSS","taxonomy","term"] # disable hugo's content that we don't need...
 
-title = "آکادمی کوین‌ ایران - Coiniran Academy" # page title -> see ./layouts/partials/head.html
+defaultContentLanguage = "fa"
+defaultContentLanguageInSubdir = false   # fa served at /, en served at /en/
 
-#googleAnalytics = "G-6RSMTN9RB2" # if needed...
+publishdir = "docs"
 
-[author]
-    name = "Coiniran Academy"
-    email = "info@shiryakhat.net"
+#googleAnalytics = "G-6RSMTN9RB2" # GA is wired directly in ./layouts/partials/head.html
+
+# content markdown contains inline HTML (dir / styling wrappers) — allow it
+[markup.goldmark.renderer]
+    unsafe = true
 
 [params]
-    description = "آکادمی کوین‌ ایران٫ دوره آموزشی بلاکچین٫ قرارداد هوشمند با سالیدیتی  - Coiniran Academy - Smartcontract Development course" # page description -> see ./layouts/partials/head.html
-    images = [] #add images here as "img/name.ext" (points to s./static/img/) to populate the default og and twitter <meta> attributes -> see ./layouts/partials/head.html
+    # shared, language-neutral params
+    images = [] # add images here as "img/name.ext" (points to ./static/img/) -> see ./layouts/partials/head.html
+    [params.author]
+        name = "Coiniran Academy"
+        email = "info@shiryakhat.net"
 
-# these items will be rendered 1. into a tooltip in the navbar and 2. into the footer - consider that there's limited space when adding more items -> see ./layouts/partials
+# ---------------------------------------------------------------------------
+# LANGUAGES
+# Social/menu links are defined per-language so labels are translated.
+# They render into 1. a tooltip in the navbar and 2. the footer.
+# ---------------------------------------------------------------------------
 
-[[params.social]]
-    title = "دوره ۱۴۰۲"
-    url = "https://smartcontract.coiniran.com/t/topic/5637"
+[languages]
 
-[[params.social]]
-    title = "یوتیوب"
-    url = "https://www.youtube.com/playlist?list=PLDwI1rIhknpN-4ZnbcQfqDgM5dVY73ruS"
+  [languages.fa]
+    label = "فارسی"
+    direction = "rtl"
+    weight = 1
+    contentDir = "content/fa"
+    title = "آکادمی کوین‌ ایران - Coiniran Academy"
+    [languages.fa.params]
+        description = "آکادمی کوین‌ ایران٫ دوره آموزشی بلاکچین٫ قرارداد هوشمند با سالیدیتی - Coiniran Academy - Smartcontract Development course"
 
-[[params.social]]
-    title = "توییتر"
-    url = "https://twitter.com/coiniranacademy" # add your twitter handle
-[[params.social]]
-    title = "انجمن"
-    url = "https://smartcontract.coiniran.com" # add your linkedin profile URL
+    [[languages.fa.params.social]]
+        title = "دوره ۱۴۰۲"
+        url = "https://smartcontract.coiniran.com/t/topic/5637"
+    [[languages.fa.params.social]]
+        title = "دوره ۱۴۰۰"
+        url = "https://smartcontract.coiniran.com/t/topic/1501"
+    [[languages.fa.params.social]]
+        title = "یوتیوب ۱۴۰۲"
+        url = "https://www.youtube.com/playlist?list=PLDwI1rIhknpN-4ZnbcQfqDgM5dVY73ruS"
+    [[languages.fa.params.social]]
+        title = "یوتیوب ۱۴۰۰"
+        url = "https://www.youtube.com/playlist?list=PLDwI1rIhknpNyUWdFt_XD6rpTEjTkUcYo"
+    [[languages.fa.params.social]]
+        title = "توییتر"
+        url = "https://twitter.com/coiniranacademy"
+    [[languages.fa.params.social]]
+        title = "انجمن"
+        url = "https://smartcontract.coiniran.com"
 
-[[params.social]]
-    title = "دوره ۱۴۰۰"
-    url = "https://smartcontract.coiniran.com/t/topic/1501"
+  [languages.en]
+    label = "English"
+    direction = "ltr"
+    weight = 2
+    contentDir = "content/en"
+    title = "Coiniran Academy — Blockchain & Smart Contract Course"
+    [languages.en.params]
+        description = "Coiniran Academy — a free Blockchain & Smart Contract development course in Solidity for Persian-speaking developers."
 
+    [[languages.en.params.social]]
+        title = "2023 Course"
+        url = "https://smartcontract.coiniran.com/t/topic/5637"
+    [[languages.en.params.social]]
+        title = "2021 Course"
+        url = "https://smartcontract.coiniran.com/t/topic/1501"
+    [[languages.en.params.social]]
+        title = "YouTube 2023"
+        url = "https://www.youtube.com/playlist?list=PLDwI1rIhknpN-4ZnbcQfqDgM5dVY73ruS"
+    [[languages.en.params.social]]
+        title = "YouTube 2021"
+        url = "https://www.youtube.com/playlist?list=PLDwI1rIhknpNyUWdFt_XD6rpTEjTkUcYo"
+    [[languages.en.params.social]]
+        title = "Twitter"
+        url = "https://twitter.com/coiniranacademy"
+    [[languages.en.params.social]]
+        title = "Forum"
+        url = "https://smartcontract.coiniran.com"
