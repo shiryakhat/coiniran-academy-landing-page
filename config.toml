@@ -52,7 +52,7 @@ publishdir = "docs"
         url = "https://www.youtube.com/playlist?list=PLDwI1rIhknpNyUWdFt_XD6rpTEjTkUcYo"
     [[languages.fa.params.social]]
         title = "توییتر"
-        url = "https://twitter.com/coiniranacademy"
+        url = "https://x.com/coiniranacademy"
     [[languages.fa.params.social]]
         title = "انجمن"
         url = "https://smartcontract.coiniran.com"
@@ -80,7 +80,7 @@ publishdir = "docs"
         url = "https://www.youtube.com/playlist?list=PLDwI1rIhknpNyUWdFt_XD6rpTEjTkUcYo"
     [[languages.en.params.social]]
         title = "Twitter"
-        url = "https://twitter.com/coiniranacademy"
+        url = "https://x.com/coiniranacademy"
     [[languages.en.params.social]]
         title = "Forum"
         url = "https://smartcontract.coiniran.com"

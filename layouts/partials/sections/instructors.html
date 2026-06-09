@@ -1,0 +1,41 @@
+{{ $headless := .Site.GetPage "/sections" }}
+{{ $intro := $headless.Resources.GetMatch (printf "*%s*" "instructors") }}
+{{ $data := hugo.Data.instructors }}
+{{ $lang := .Site.Language.Lang }}
+
+<div id="instructors" class="w-full flex flex-col justify-center items-center bg-gray-100 py-20">
+    <div class="self-center text-center w-full sm:w-2/3 xl:w-1/2 px-4 mb-10">
+        <h2 class="font-bold tracking-wider text-gray-800 text-4xl mb-4">{{ $intro.Title }}</h2>
+    </div>
+
+    <div class="w-full max-w-screen-xl flex flex-row flex-wrap justify-center px-4">
+        {{ range $data.instructors }}
+            <div class="w-full sm:w-1/2 lg:w-1/4 px-3 mb-6">
+                <div dir="auto" class="h-full bg-white rounded-lg shadow-md hover:shadow-lg p-6 flex flex-col items-center text-center">
+                    <img src="/img/instructors/{{ .avatar }}" alt="{{ if eq $lang "fa" }}{{ .nameFa }}{{ else }}{{ .nameEn }}{{ end }}" loading="lazy" class="w-24 h-24 rounded-full object-cover mb-4 shadow">
+                    <h3 class="text-pink-600 font-bold text-xl mb-2">{{ if eq $lang "fa" }}{{ .nameFa }}{{ else }}{{ .nameEn }}{{ end }}</h3>
+                    <p class="font-light text-gray-700 leading-relaxed flex-grow">{{ if eq $lang "fa" }}{{ .bioFa }}{{ else }}{{ .bioEn }}{{ end }}</p>
+                    {{ with .twitter }}
+                        <a href="{{ . }}" target="_blank" rel="noopener" class="inline-block text-gray-500 hover:text-pink-600 no-underline mt-4 font-bold">𝕏 / Twitter ↗</a>
+                    {{ end }}
+                </div>
+            </div>
+        {{ end }}
+    </div>
+
+    <!-- Academic supervisor: same card style, centred below -->
+    {{ with $data.supervisor }}
+        <div class="w-full max-w-screen-xl flex flex-row justify-center px-4 mt-2">
+            <div class="w-full sm:w-1/2 lg:w-1/4 px-3">
+                <div dir="auto" class="h-full bg-white rounded-lg shadow-md hover:shadow-lg p-6 flex flex-col items-center text-center border-t-4 border-pink-600">
+                    <img src="/img/instructors/{{ .avatar }}" alt="{{ if eq $lang "fa" }}{{ .nameFa }}{{ else }}{{ .nameEn }}{{ end }}" loading="lazy" class="w-24 h-24 rounded-full object-cover mb-4 shadow">
+                    <h3 class="text-pink-600 font-bold text-xl mb-2">{{ if eq $lang "fa" }}{{ .nameFa }}{{ else }}{{ .nameEn }}{{ end }}</h3>
+                    <p class="font-light text-gray-700 leading-relaxed flex-grow">{{ if eq $lang "fa" }}{{ .bioFa }}{{ else }}{{ .bioEn }}{{ end }}</p>
+                    {{ with .twitter }}
+                        <a href="{{ . }}" target="_blank" rel="noopener" class="inline-block text-gray-500 hover:text-pink-600 no-underline mt-4 font-bold">𝕏 / Twitter ↗</a>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    {{ end }}
+</div>

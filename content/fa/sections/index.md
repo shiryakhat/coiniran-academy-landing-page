@@ -10,6 +10,8 @@ resources:
       src: features.md
     - name: videos
       src: videos.md
+    - name: instructors
+      src: instructors.md
     - name: register
       src: register.md
     - src: 'features/*'

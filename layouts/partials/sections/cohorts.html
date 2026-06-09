@@ -2,51 +2,102 @@
 {{ $videos := $headless.Resources.GetMatch (printf "*%s*" "videos") }}
 {{ $data := hugo.Data.cohorts }}
 {{ $lang := .Site.Language.Lang }}
+{{ $latest := $data.latest }}
+{{ $first := index $latest.episodes 0 }}
 
 <div id="videos" class="w-full flex flex-col justify-center items-center bg-white py-20">
-    <div class="self-center text-center w-full sm:w-2/3 xl:w-1/2 px-4 mb-8">
+    <div class="self-center text-center w-full sm:w-2/3 xl:w-1/2 px-4 mb-10">
         <h2 class="font-bold tracking-wider text-gray-800 text-4xl mb-4">{{ $videos.Title }}</h2>
         <div class="font-light text-gray-700 text-xl">
             {{ $videos.Content }}
         </div>
     </div>
 
-    <div class="self-center w-full xl:w-4/5 flex flex-col lg:flex-row lg:items-start px-4">
-
-        <!-- Latest cohort: embedded player -->
-        {{ range where $data.cohorts "latest" true }}
-            <div class="w-full lg:w-2/3 lg:pr-8 mb-8 lg:mb-0">
+    <div class="w-full max-w-screen-xl px-4">
+        <!-- Latest cohort: player + episode side-list -->
+        <div class="flex flex-col lg:flex-row">
+            <div class="w-full lg:w-2/3 lg:pr-8 mb-6 lg:mb-0">
                 <div class="inline-block bg-pink-600 text-gray-100 text-sm font-bold rounded-full px-4 py-1 mb-3">
-                    {{ i18n "videos_latest_badge" }} · {{ if eq $lang "fa" }}{{ .yearFa }}{{ else }}{{ .yearEn }}{{ end }}
+                    {{ i18n "videos_latest_badge" }} · {{ if eq $lang "fa" }}{{ $latest.yearFa }}{{ else }}{{ $latest.yearEn }}{{ end }}
                 </div>
                 <div class="video-embed shadow-lg rounded-lg overflow-hidden">
-                    <iframe src="https://www.youtube.com/embed/videoseries?list={{ .playlist }}"
-                        title="Coiniran Academy {{ .yearEn }}" frameborder="0"
+                    <iframe id="ytplayer" src="https://www.youtube.com/embed/{{ $first.id }}?rel=0"
+                        title="Coiniran Academy {{ $latest.yearEn }}" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen loading="lazy"></iframe>
                 </div>
-                <div class="text-gray-600 font-light mt-3">
-                    {{ i18n "videos_count" (dict "Count" .videos) }} · {{ i18n "videos_views" (dict "Views" .views) }}
+                <div class="flex flex-row flex-wrap items-center justify-between mt-3">
+                    <span class="text-gray-600 font-light">
+                        {{ i18n "videos_count" (dict "Count" $latest.videos) }} · {{ i18n "videos_views" (dict "Views" $latest.views) }}
+                    </span>
+                    <a href="https://www.youtube.com/playlist?list={{ $latest.playlist }}" target="_blank" rel="noopener"
+                        class="text-pink-600 font-bold hover:text-gray-800 no-underline">{{ i18n "btn_watch_youtube" }} ↗</a>
                 </div>
             </div>
-        {{ end }}
 
-        <!-- Older cohort(s): cards -->
-        <div class="w-full lg:w-1/3 flex flex-col">
-            {{ range where $data.cohorts "latest" false }}
-                <div class="bg-gray-100 rounded-lg shadow-md p-6 mb-4">
-                    <div class="inline-block bg-gray-800 text-gray-100 text-sm font-bold rounded-full px-4 py-1 mb-3">
-                        {{ i18n "videos_archive_badge" }} · {{ if eq $lang "fa" }}{{ .yearFa }}{{ else }}{{ .yearEn }}{{ end }}
-                    </div>
-                    <div class="text-gray-700 font-light mb-4">
-                        {{ i18n "videos_count" (dict "Count" .videos) }} · {{ i18n "videos_views" (dict "Views" .views) }}
-                    </div>
+            <div class="w-full lg:w-1/3">
+                <h4 class="font-bold tracking-widest text-gray-800 text-lg mb-3">{{ i18n "episodes_title" }}</h4>
+                <ul class="episode-list list-none">
+                    {{ range $i, $ep := $latest.episodes }}
+                        <li>
+                            <button type="button" data-vid="{{ $ep.id }}"
+                                class="episode w-full flex flex-row items-center p-2 mb-1 rounded hover:bg-gray-100 focus:outline-none {{ if eq $i 0 }}bg-gray-100{{ end }}">
+                                <img src="https://img.youtube.com/vi/{{ $ep.id }}/mqdefault.jpg" alt="" loading="lazy"
+                                    class="w-24 h-auto rounded flex-none">
+                                <span class="px-3 text-gray-700 text-sm font-light leading-snug">{{ if eq $lang "fa" }}{{ $ep.fa }}{{ else }}{{ $ep.en }}{{ end }}</span>
+                            </button>
+                        </li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+
+        <!-- Archive: older cohort(s) -->
+        <div class="mt-16">
+            {{ range $data.archive }}
+                <div class="flex flex-col sm:flex-row items-center bg-gray-100 rounded-lg shadow-md overflow-hidden">
                     <a href="https://www.youtube.com/playlist?list={{ .playlist }}" target="_blank" rel="noopener"
-                        class="inline-block px-6 py-2 text-gray-100 bg-pink-600 rounded-full shadow-md hover:bg-gray-800 no-underline">
-                        {{ i18n "btn_watch_youtube" }}
+                        class="block w-full sm:w-1/3 flex-none">
+                        <img src="https://img.youtube.com/vi/{{ .thumb }}/hqdefault.jpg" alt="" loading="lazy"
+                            class="w-full h-full object-cover">
                     </a>
+                    <div class="w-full p-6">
+                        <div class="inline-block bg-gray-800 text-gray-100 text-sm font-bold rounded-full px-4 py-1 mb-3">
+                            {{ i18n "videos_archive_badge" }} · {{ if eq $lang "fa" }}{{ .yearFa }}{{ else }}{{ .yearEn }}{{ end }}
+                        </div>
+                        <div class="text-gray-700 font-light mb-4">
+                            {{ i18n "videos_count" (dict "Count" .videos) }} · {{ i18n "videos_views" (dict "Views" .views) }}
+                        </div>
+                        <div class="flex flex-row flex-wrap items-center">
+                            <a href="https://www.youtube.com/playlist?list={{ .playlist }}" target="_blank" rel="noopener"
+                                class="inline-block px-6 py-2 text-gray-100 bg-pink-600 rounded-full shadow-md hover:bg-gray-800 no-underline mr-3 mb-2">
+                                {{ i18n "btn_watch_youtube" }}
+                            </a>
+                            {{ with .poap }}
+                                <a href="{{ . }}" target="_blank" rel="noopener"
+                                    class="inline-block px-4 py-2 text-pink-600 border border-pink-600 rounded-full hover:bg-pink-600 hover:text-gray-100 no-underline mb-2">
+                                    🏅 {{ i18n "poap_cert" }}
+                                </a>
+                            {{ end }}
+                        </div>
+                    </div>
                 </div>
             {{ end }}
         </div>
     </div>
 </div>
+
+<script>
+    (function () {
+        var player = document.getElementById('ytplayer');
+        var items = document.querySelectorAll('#videos .episode');
+        items.forEach(function (btn) {
+            btn.addEventListener('click', function () {
+                var vid = btn.getAttribute('data-vid');
+                player.src = 'https://www.youtube.com/embed/' + vid + '?rel=0&autoplay=1';
+                items.forEach(function (b) { b.classList.remove('bg-gray-100'); });
+                btn.classList.add('bg-gray-100');
+            });
+        });
+    })();
+</script>

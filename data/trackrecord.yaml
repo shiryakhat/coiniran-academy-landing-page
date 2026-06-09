@@ -1,35 +1,49 @@
 # Track-record numbers and lists. Stat values are language-neutral; their
-# labels come from i18n (stat_* keys). Edit numbers here.
+# labels come from i18n (stat_* / chart_* keys). Edit numbers here.
+
+# Donut charts (percentages) shown at the top of the section.
+charts:
+  - percent: 96
+    label: "stat_completion"
+  - percent: 28
+    label: "chart_women_students"
+  - percent: 38
+    label: "chart_women_grads"
+
+# Numeric stat cards (counts).
 stats:
   - value: "2"
     label: "stat_cohorts"
-  - value: "33"
+  - value: "68"
     label: "stat_graduates"
-  - value: "100%"
-    label: "stat_completion"
-  - value: "28%"
-    label: "stat_women"
   - value: "13"
     label: "stat_youngest"
   - value: "51k+"
     label: "stat_views"
 
-# Guest speakers (2023 cohort) — proper nouns, shown the same in both languages.
+# Guest speakers (2023 cohort) — proper nouns + company logos.
 speakers:
   - name: "Sina Mahmoodi"
     org: "Ethereum Foundation"
+    logo: "ethereum.svg"
   - name: "Mehdi Salehi"
     org: "Arbitrum"
+    logo: "arbitrum.svg"
   - name: "Mohammad Jahanara"
     org: "Quantstamp"
+    logo: "quantstamp.svg"
 
-# Notable student projects (2023 cohort).
+# Notable student projects (2023 cohort). All link to the announcement post.
 projects:
   - name: "DeLP"
     author: "Mahdieh Amiri"
+    url: "https://smartcontract.coiniran.com/t/topic/6181"
   - name: "Tender"
     author: "Hadi Saghafi"
+    url: "https://smartcontract.coiniran.com/t/topic/6181"
   - name: "Donation dApp"
     author: "Bahador Ghadamkheir"
+    url: "https://smartcontract.coiniran.com/t/topic/6181"
   - name: "Copyright Management"
     author: "Hadi Hassan Pourneiyam"
+    url: "https://smartcontract.coiniran.com/t/topic/6181"

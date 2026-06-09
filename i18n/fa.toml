@@ -70,22 +70,24 @@ other = "{{ .Views }} بازدید"
 [stat_cohorts]
 other = "دوره برگزارشده"
 [stat_graduates]
-other = "دانش‌آموخته"
+other = "دانشجو"
 [stat_completion]
 other = "نرخ فارغ‌التحصیلی"
-[stat_women]
-other = "دانشجویان خانم (۳۸٪ فارغ‌التحصیلان)"
+[chart_women_students]
+other = "دانشجویان خانم"
+[chart_women_grads]
+other = "فارغ‌التحصیلان خانم"
 [stat_youngest]
 other = "سن کم‌ترین دانشجو"
 [stat_views]
 other = "بازدید ویدیوها"
-[stat_certificate]
-other = "مدرک ان‌اف‌تی (POAP)"
-[stat_years]
-other = "سال‌های ۱۴۰۰ و ۱۴۰۲"
+[poap_cert]
+other = "گواهی دیجیتال (POAP)"
+[episodes_title]
+other = "جلسات دوره"
 
 [highlight_devconnect]
-other = "حمایت مالی از دانشجویان برتر و مدرسان برای حضور در DevConnect استانبول ۲۰۲۳ و منتورینگ در ETHGlobal Istanbul"
+other = '🇹🇷 حمایت مالی از دانشجویان و مدرسان برتر برای حضور در <bdi>DevConnect Istanbul 2023</bdi> و منتورینگ آن‌ها در <bdi>ETHGlobal Istanbul</bdi>'
 
 [speakers_title]
 other = "سخنرانان مهمان"

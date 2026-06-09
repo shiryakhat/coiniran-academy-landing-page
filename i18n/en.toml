@@ -70,22 +70,24 @@ other = "{{ .Views }} views"
 [stat_cohorts]
 other = "cohorts run"
 [stat_graduates]
-other = "graduates"
+other = "students"
 [stat_completion]
 other = "completion rate"
-[stat_women]
-other = "women students (38% of graduates)"
+[chart_women_students]
+other = "women students"
+[chart_women_grads]
+other = "women graduates"
 [stat_youngest]
 other = "youngest student's age"
 [stat_views]
 other = "video views"
-[stat_certificate]
-other = "POAP NFT certificate"
-[stat_years]
-other = "2021 & 2023"
+[poap_cert]
+other = "Digital certificate (POAP)"
+[episodes_title]
+other = "Course episodes"
 
 [highlight_devconnect]
-other = "Top students and instructors sponsored to attend DevConnect Istanbul 2023 and mentored at ETHGlobal Istanbul"
+other = '🇹🇷 Top students and instructors sponsored to attend <bdi>DevConnect Istanbul 2023</bdi> and mentored at <bdi>ETHGlobal Istanbul</bdi>'
 
 [speakers_title]
 other = "Guest speakers"

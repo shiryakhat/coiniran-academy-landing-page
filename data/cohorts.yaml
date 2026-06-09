@@ -1,19 +1,51 @@
 # Course video cohorts. Labels are translated via i18n; these are the
-# language-neutral facts. `latest: true` marks the cohort embedded inline.
-cohorts:
-  - id: "2023"
-    yearFa: "۱۴۰۲"
-    yearEn: "2023"
-    latest: true
-    playlist: "PLDwI1rIhknpN-4ZnbcQfqDgM5dVY73ruS"
-    videos: 11
-    views: "8.2k"
-    forum: "https://smartcontract.coiniran.com/t/topic/5637"
-  - id: "2021"
-    yearFa: "۱۴۰۰"
+# language-neutral facts. `latest` is embedded inline with a clickable episode
+# list; `archive` cohorts are shown below as cards with a thumbnail.
+latest:
+  yearFa: "۱۴۰۲"
+  yearEn: "2023"
+  playlist: "PLDwI1rIhknpN-4ZnbcQfqDgM5dVY73ruS"
+  videos: 11
+  views: "8.2k"
+  forum: "https://smartcontract.coiniran.com/t/topic/5637"
+  episodes:
+    - id: "gzYoap5f4Kc"
+      fa: "جلسه ۱ — مفاهیم بلاک‌چین و اجماع"
+      en: "Session 1 — Blockchain & consensus"
+    - id: "UoH_3eMQBoU"
+      fa: "جلسه ۳ — مقدمات اتریوم و اثبات سهام"
+      en: "Session 3 — Ethereum & Proof of Stake"
+    - id: "oBrCtuhmOlM"
+      fa: "جلسه ۴ — کلاینت اتریوم و سالیدیتی ۱"
+      en: "Session 4 — Ethereum clients & Solidity I"
+    - id: "ytnu1oVp7Qs"
+      fa: "جلسه ۵ — مقدمات سالیدیتی ۲"
+      en: "Session 5 — Solidity II"
+    - id: "Js4f5trJJzs"
+      fa: "جلسه ۶ — ابزارها و طراحی قرارداد"
+      en: "Session 6 — Tooling & contract design"
+    - id: "mpSQRc_gA6k"
+      fa: "جلسه ۷ — تست هاردهت و فرانت‌اند"
+      en: "Session 7 — Hardhat testing & frontend"
+    - id: "xEnI27OUKdM"
+      fa: "جلسه ۹ — امنیت قراردادها (۱)"
+      en: "Session 9 — Smart-contract security I"
+    - id: "gZKK3DSyWao"
+      fa: "جلسه ۱۰ — امنیت، گس و دیفای"
+      en: "Session 10 — Security, gas & DeFi"
+    - id: "UhkUSDL-Yk8"
+      fa: "جلسه ۱۱ — لایه دو و مقیاس‌پذیری"
+      en: "Session 11 — Layer 2 & scalability"
+    - id: "utx_OdDqCKA"
+      fa: "جلسه ۱۲ — زیرو-نالج و مباحث پیشرفته"
+      en: "Session 12 — Zero-Knowledge & advanced"
+
+archive:
+  - yearFa: "۱۴۰۰"
     yearEn: "2021"
-    latest: false
     playlist: "PLDwI1rIhknpNyUWdFt_XD6rpTEjTkUcYo"
     videos: 14
     views: "43k"
     forum: "https://smartcontract.coiniran.com/t/topic/1501"
+    thumb: "6wLAkB0Dfgk"
+    poap: "https://poap.gallery/drops/12594"

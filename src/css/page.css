@@ -102,3 +102,53 @@ html {
   width: 100%;
   height: 100%;
 }
+
+/* Framed page: a centered column on a tinted backdrop so the page
+   reads as a contained sheet rather than sparse full-bleed content. */
+html {
+  overflow-x: hidden; /* guard against phantom horizontal scroll (esp. RTL) */
+}
+
+body {
+  background-color: #e2e8f0; /* gray-300 backdrop visible at the sides */
+}
+
+#site {
+  background-image:
+    linear-gradient(135deg, rgba(213,63,140,0.04) 0%, rgba(67,65,144,0.04) 100%);
+}
+
+/* Donut charts (conic-gradient, no JS / no chart lib) */
+.donut {
+  position: relative;
+  width: 8.5rem;
+  height: 8.5rem;
+  border-radius: 9999px;
+  background: conic-gradient(#d53f8c calc(var(--p, 0) * 1%), #e2e8f0 0);
+  flex: none;
+}
+
+.donut__hole {
+  position: absolute;
+  inset: 0.85rem;
+  border-radius: 9999px;
+  background: #f7fafc; /* matches the stats section bg (gray-100) */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Scrollable episode list beside the embedded player */
+.episode-list {
+  max-height: 28rem;
+  overflow-y: auto;
+}
+
+.episode-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.episode-list::-webkit-scrollbar-thumb {
+  background-color: #cbd5e0;
+  border-radius: 3px;
+}
